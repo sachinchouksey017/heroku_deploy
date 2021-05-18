@@ -1,0 +1,101 @@
+@mixin hoverCard($backgroundColor, $borderColor, $boxShadow) {
+    background-color: $backgroundColor;
+    box-shadow: 0px 3px 6px $boxShadow;
+    border: 1px solid $borderColor;
+}
+
+.chooseType {
+    font: normal normal medium 15px/19px Montserrat;
+    letter-spacing: 0px;
+    color: #000000;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 10px;
+}
+.choose-box {
+    .card {
+        width: 165px;
+        height: 150px;
+        background: #ffffff 0% 0% no-repeat padding-box;
+        border-radius: 7px;
+        opacity: 1;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: all ease-in-out 0.2s;
+        border: 1px solid transparent;
+        cursor: pointer;
+        .text {
+            // font: normal normal medium 15px/19px Montserrat;
+            font-size: 15px;
+            letter-spacing: 0px;
+            color: #000000;
+            text-transform: capitalize;
+            opacity: 0.21;
+        }
+    }
+
+    .card-length:hover {
+        @include hoverCard(#edfdf9, #0ec098, #00000029);
+        img {
+            content: url("../../../assets/images/scale.svg");
+        }
+        .text {
+            // font: normal normal medium 15px/19px Montserrat;
+            color: #0ec098;
+            text-transform: capitalize;
+            opacity: 1;
+            font-weight: 600;
+        }
+    }
+
+    .card-length-selected {
+        @include hoverCard(#edfdf9, #0ec098, #00000029);
+        img {
+            content: url("../../../assets/images/scale.svg");
+        }
+        .text {
+            // font: normal normal medium 15px/19px Montserrat;
+            color: #0ec098;
+            text-transform: capitalize;
+            opacity: 1;
+            font-weight: 600;
+        }
+    }
+
+    .card-temp:hover , .card-temp-selected {
+        background-color: #ffeef0;
+        @include hoverCard(#ffeef0, #fd5160, #00000029);
+        img {
+            content: url("../../../assets/images/hot1.svg");
+        }
+        .text {
+            // font: normal normal medium 15px/19px Montserrat;
+            color: #fd5160;
+            text-transform: capitalize;
+            opacity: 1;
+            font-weight: 600;
+        }
+    }
+    .card-volume:hover , .card-volume-selected{
+        background-color: #e8ddff;
+        @include hoverCard(#e8ddff, #7224ff, #00000029);
+        img {
+            content: url("../../../assets/images/beaker1.svg");
+        }
+        .text {
+            // font: normal normal medium 15px/19px Montserrat;
+            color: #7224ff;
+            text-transform: capitalize;
+            opacity: 1;
+            font-weight: 600;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightblue;
+    }
+  }

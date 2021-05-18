@@ -1,0 +1,26 @@
+<div class="main" fxLayout='row wrap'>
+  <div class="chooseType" fxFlex=100>
+    Choose type
+  </div>
+  <div class="choose-box" fxFlex fxLayout='row' fxLayout.xs='column' fxLayoutAlign='space-between center'
+    fxLayoutGap=20px fxLayoutGap.sm=10px>
+
+    <div class="card card-length" (click)="select('length')" [ngClass]="{'card-length-selected': selected == 'length'}"
+      fxLayout='column' fxLayoutAlign='center center'>
+      <img src="../../../assets/images/scale1.svg" alt="">
+      <span fxFlexOffset=14px class="text">Length</span>
+    </div>
+    <div class="card card-temp" (click)="select('temp')" [ngClass]="{'card-temp-selected':selected == 'temp'}"
+      fxLayout='column' fxLayoutAlign='center center'>
+      <img src="../../../assets/images/hot.svg" alt="">
+      <span fxFlexOffset=14px class="text">Temperature</span>
+    </div>
+    <div class="card card-volume" (click)="select('volume')" [ngClass]="{'card-volume-selected':selected == 'volume'}"
+      fxLayout='column' fxLayoutAlign='center center'>
+      <img src="../../../assets/images/beaker.svg" alt="">
+      <span fxFlexOffset=14px class="text">Volume</span>
+    </div>
+
+  </div>
+
+</div>

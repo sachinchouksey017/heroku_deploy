@@ -1,0 +1,48 @@
+<!-- <p routerLink='/register'>login works!</p>
+<mat-form-field appearance="outline">
+    <mat-label>Outline form field</mat-label>
+    <input matInput placeholder="Placeholder">
+</mat-form-field>
+
+<div fxLayout fxLayoutAlign='center center'>
+    <div *ngIf='!show' (click)='show=!show' class="card1 create-note">
+
+    </div>
+    <div *ngIf='show' class="card2 create-note">
+        <button (click)='show=!show'>close</button>
+    </div>
+</div>
+
+<div class="display" fxLayout fxLayoutGap='10px'>
+
+    <div *ngFor='let card of cardArray' class="note">
+        <div class="text">
+            {{card.title}}
+        </div>
+        <div class="text">
+            {{card.description}}
+        </div>
+    </div>
+</div> -->
+
+<div *ngIf='openedBox==1'  class="cart-box">
+    box1
+</div>
+
+<div *ngIf='openedBox!=1' (click)='openBox(1)' class="cart-box-small">
+    box1 small
+</div>
+
+<div *ngIf='openedBox==2' class="cart-box">
+    box2
+</div>
+<div *ngIf='openedBox!=2' (click)='openBox(2)' class="cart-box-small">
+    box2 small
+</div>
+
+<div class="cart-box" *ngIf='openedBox==3'>
+    box3
+</div>
+<div *ngIf='openedBox!=3' (click)='openBox(3)' class="cart-box-small">
+    box3 small
+</div>

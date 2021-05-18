@@ -1,0 +1,5 @@
+<div class="toolbar"> </div>
+<div class="content">
+    <app-create-note (messageEvent)="updateArray($event)"></app-create-note>
+    <app-display-notes [array]='noteArray'></app-display-notes>
+</div>
