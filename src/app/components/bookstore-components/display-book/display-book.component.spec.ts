@@ -1,29 +1,25 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardComponent } from './dashboard.component';
+import { DisplayBookComponent } from './display-book.component';
 
-describe('DashboardComponent', () => {
-  let component: DashboardComponent;
-  let fixture: ComponentFixture<DashboardComponent>;
+describe('DisplayBookComponent', () => {
+  let component: DisplayBookComponent;
+  let fixture: ComponentFixture<DisplayBookComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ DisplayBookComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent);
+    fixture = TestBed.createComponent(DisplayBookComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-
-
-  // test case
   it('should create', () => {
-    
     expect(component).toBeTruthy();
   });
 });

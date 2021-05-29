@@ -1,0 +1,31 @@
+<div fxLayout fxLayoutAlign='center center'>
+    <div fxFlex=80 fxLayout='column'>
+
+        <div class="sub-head" fxLayout fxLayoutAlign='space-between center'>
+            <div>
+                Books
+            </div>
+            <div>
+                Sort By
+            </div>
+
+        </div>
+
+        <div fxLayout='row wrap' fxLayoutAlign='start start' fxLayoutAlign.xs='center start' fxLayoutGap=20px
+            fxLayoutGap.xs=0>
+            <div *ngFor='let book of books;let index=ind' class="book-card">
+                <div class="row-1" fxLayout fxLayoutAlign='center center'>
+                    <img src="../../../../assets/images/book.png" alt="Book">
+                </div>
+                <div class="des-hover">
+                    hello
+                </div>
+                <div>
+                    lower
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>

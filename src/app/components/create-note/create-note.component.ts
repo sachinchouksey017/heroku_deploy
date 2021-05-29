@@ -1,5 +1,4 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
-import { DataSharingService } from 'src/app/service/data-service/data-sharing.service';
 
 @Component({
   selector: 'app-create-note',
@@ -9,7 +8,7 @@ import { DataSharingService } from 'src/app/service/data-service/data-sharing.se
 export class CreateNoteComponent implements OnInit {
   @Output() messageEvent = new EventEmitter<any>();
 
-  constructor(private data: DataSharingService) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
@@ -20,7 +19,6 @@ export class CreateNoteComponent implements OnInit {
     //   color: ''
     // })
 
-    this.data.changeMessage('data from create note')
   }
 
 }

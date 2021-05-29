@@ -1,29 +1,25 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DashboardComponent } from './dashboard.component';
+import { BookstoreHomeComponent } from './bookstore-home.component';
 
-describe('DashboardComponent', () => {
-  let component: DashboardComponent;
-  let fixture: ComponentFixture<DashboardComponent>;
+describe('BookstoreHomeComponent', () => {
+  let component: BookstoreHomeComponent;
+  let fixture: ComponentFixture<BookstoreHomeComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DashboardComponent ]
+      declarations: [ BookstoreHomeComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DashboardComponent);
+    fixture = TestBed.createComponent(BookstoreHomeComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-
-
-  // test case
   it('should create', () => {
-    
     expect(component).toBeTruthy();
   });
 });

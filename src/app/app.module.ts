@@ -8,7 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
+import { OAuthModule } from 'angular-oauth2-oidc';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -18,6 +18,11 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CreateNoteComponent } from './components/create-note/create-note.component';
 import { DisplayNotesComponent } from './components/display-notes/display-notes.component';
+import { HeaderComponent } from './components/bookstore-components/header/header.component';
+import { BookstoreHomeComponent } from './components/bookstore-components/bookstore-home/bookstore-home.component';
+import {MatIconModule} from '@angular/material/icon';
+import { DisplayBookComponent } from './components/bookstore-components/display-book/display-book.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,10 @@ import { DisplayNotesComponent } from './components/display-notes/display-notes.
     RegisterComponent,
     DashboardComponent,
     CreateNoteComponent,
-    DisplayNotesComponent
+    DisplayNotesComponent,
+    HeaderComponent,
+    BookstoreHomeComponent,
+    DisplayBookComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
@@ -38,7 +46,10 @@ import { DisplayNotesComponent } from './components/display-notes/display-notes.
     ReactiveFormsModule,
     FormsModule,
     MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    OAuthModule.forRoot(),
+    MatIconModule,
+    MatBadgeModule
     // HomeModule
   ],
   providers: [

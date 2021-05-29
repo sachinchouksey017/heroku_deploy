@@ -25,7 +25,7 @@
     </div>
 </div> -->
 
-<div *ngIf='openedBox==1'  class="cart-box">
+<div *ngIf='openedBox==1' class="cart-box">
     box1
 </div>
 
@@ -45,4 +45,11 @@
 </div>
 <div *ngIf='openedBox!=3' (click)='openBox(3)' class="cart-box-small">
     box3 small
+</div>
+
+
+<div>
+    <button mat-stroked-button color="primary" (click)="loginOpenId()">login</button>
+     <button mat-stroked-button (click)="logout()"
+        color="primary">logout</button>
 </div>

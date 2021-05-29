@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGaurdGuard } from './auth-gaurd/auth-gaurd.guard';
+import { BookstoreHomeComponent } from './components/bookstore-components/bookstore-home/bookstore-home.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
@@ -16,12 +17,15 @@ const routes: Routes = [
   },
   {
     path: 'dashboard',
-    canActivate:[AuthGaurdGuard],
     component: DashboardComponent
   },
   {
+    path: 'bookstore',
+    component: BookstoreHomeComponent
+  },
+  {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'bookstore',
     pathMatch: 'full'
   }
 ];

@@ -1,5 +1,6 @@
 import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
-
+import { OAuthService } from 'angular-oauth2-oidc';
+import { authCodeFlowConfig } from "../../../config/auth.config";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -7,7 +8,7 @@ import { Component, OnChanges, OnDestroy, OnInit } from '@angular/core';
 })
 export class LoginComponent implements OnInit, OnChanges, OnDestroy {
 
-  constructor() { }
+  constructor(private oauthService: OAuthService) { }
   show = false
   cardArray = []
   openedBox = 1
@@ -18,6 +19,7 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
 
   ngOnInit(): void {
     console.log("i am in ng init");
+    this.initOAuth()
     // getAllNoteApi
     this.cardArray = [{
       title: 'test', description: 'new'
@@ -30,6 +32,10 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
       title: 'test3', description: 'new'
     }
     ]
+
+
+    console.log(this.oauthService.getAccessToken());
+    
   }
   login() {
     console.log(' login button is clicked');
@@ -37,6 +43,25 @@ export class LoginComponent implements OnInit, OnChanges, OnDestroy {
   openBox(box) {
     this.openedBox = box
   }
+
+  initOAuth() {
+    this.oauthService.configure(authCodeFlowConfig);
+    this.oauthService.loadDiscoveryDocumentAndTryLogin();
+  }
+
+  loginOpenId() {
+    console.log("login");
+    // this.oauthService.setupAutomaticSilentRefresh()
+    this.oauthService.initLoginFlow();
+  }
+  logout() {
+    console.log("logout");
+    
+    this.oauthService.logOut()
+  }
+
+
+
   ngOnDestroy() {
     console.log('i am in destroy');
 

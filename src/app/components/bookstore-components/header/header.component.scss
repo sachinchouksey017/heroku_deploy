@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    min-height: 64px;
+    background-color: #a03037;
+    .header-child {
+        width: 80%;
+    }
+    .head {
+        margin: 0;
+        color: white;
+        font: normal normal normal 20px/26px Roboto;
+    }
+}
+.icon {
+    color: white;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-infix {
+    border: none;
+}
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-wrapper {
+    padding-bottom: 3px;
+}
+// @media only screen and (max-width: 600px) {
+//     .field {
+//         display: none;
+//     }
+// }
